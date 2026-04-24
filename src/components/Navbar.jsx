@@ -18,13 +18,13 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'Features', path: '/features' },
     { name: 'How It Works', path: '/how-it-works' },
-    { name: 'Use Cases', path: '/#use-cases' },
+    { name: 'Use Cases', path: '/use-cases' },
     { name: 'Pricing', path: '/pricing' },
     { name: 'Contact', path: '/contact' }
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-xl border-b border-slate-200/50 shadow-sm py-3' : 'bg-transparent py-5'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-xl border-b border-[#1D9E75]/10 shadow-sm py-3' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3 group">
@@ -39,10 +39,10 @@ const Navbar = () => {
 
             {/* Text Branding */}
             <div className="flex flex-col">
-              <span className="font-extrabold text-2xl text-primary tracking-tight leading-none hover:text-emerald-700 transition-colors">
+              <span className="font-extrabold text-2xl text-[#0F6E56] tracking-tight leading-none hover:text-[#1D9E75] transition-colors">
                 Syncify
               </span>
-              <span className="text-[10px] text-slate-500 font-semibold hidden sm:block mt-1 uppercase tracking-widest">
+              <span className="text-[10px] text-[#6B7280] font-semibold hidden sm:block mt-1 uppercase tracking-widest">
                 A Shopify to Salesforce Connector App
               </span>
             </div>
@@ -56,20 +56,20 @@ const Navbar = () => {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`text-sm font-bold transition-colors ${isActive ? 'text-primary' : 'text-slate-600 hover:text-slate-900'}`}
+                    className={`text-sm font-bold transition-colors ${isActive ? 'text-[#0F6E56]' : 'text-[#6B7280] hover:text-[#111827]'}`}
                   >
                     {link.name}
                   </Link>
                 );
               })}
             </div>
-            <button className="bg-slate-900 hover:bg-slate-800 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
+            <Link to="/contact" className="bg-[#0F6E56] hover:bg-[#1D9E75] text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
               Book a Demo
-            </button>
+            </Link>
           </div>
 
           <div className="lg:hidden">
-            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2 text-slate-600">
+            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2 text-[#6B7280]">
               {isMobileMenuOpen ? <XIcon className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -77,7 +77,7 @@ const Navbar = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-slate-100 absolute w-full left-0 top-full shadow-2xl pb-6">
+        <div className="lg:hidden bg-white border-b border-[#F9FAFB] absolute w-full left-0 top-full shadow-2xl pb-6">
           <div className="flex flex-col px-6 pt-4 space-y-4">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
@@ -85,16 +85,16 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`text-lg font-bold py-2 ${isActive ? 'text-primary' : 'text-slate-600'}`}
+                  className={`text-lg font-bold py-2 ${isActive ? 'text-[#0F6E56]' : 'text-[#6B7280]'}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
                 </Link>
               );
             })}
-            <button className="bg-slate-900 text-white px-6 py-4 rounded-xl text-base font-semibold w-full mt-4">
+            <Link to="/contact" className="bg-[#0F6E56] text-white px-6 py-4 rounded-xl text-base font-semibold w-full mt-4 text-center" onClick={() => setIsMobileMenuOpen(false)}>
               Book a Demo
-            </button>
+            </Link>
           </div>
         </div>
       )}

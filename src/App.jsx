@@ -15,7 +15,7 @@ import Terms from './pages/Terms';
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-[#F8FAFC] font-sans selection:bg-primary/20 selection:text-primary overflow-x-hidden flex flex-col">
+      <div className="min-h-screen bg-[#F9FAFB] font-sans selection:bg-[#0F6E56]/20 selection:text-[#0F6E56] overflow-x-hidden flex flex-col">
         <Navbar />
         <main className="pt-20 flex-grow">
           <Routes>

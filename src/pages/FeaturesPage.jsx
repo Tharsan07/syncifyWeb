@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Check, X, Zap, RefreshCw, Layers, Globe, Sliders, AlertCircle, ShoppingCart, Users, Package, Activity, Wand2, Download, ShieldCheck, TrendingUp, Cpu, Cloud } from 'lucide-react';
 import FadeIn from '../components/FadeIn';
 
@@ -108,33 +109,33 @@ const FeaturesPage = () => {
     <div className="bg-white">
 
       {/* SECTION 1 - HERO */}
-      <section className="relative pt-24 pb-12 overflow-hidden border-b border-gray-100">
+      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#E1F5EE] to-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <FadeIn>
-                <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                <h1 className="text-4xl md:text-5xl font-extrabold text-[#111827] tracking-tight leading-tight mb-6">
                   Every feature you need to stay in sync
                 </h1>
-                <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                <p className="text-lg text-[#6B7280] mb-8 leading-relaxed">
                   Syncify is purpose-built for ecommerce teams that run on Salesforce. Every feature is designed to eliminate data friction, improve visibility, and keep your platforms aligned  without any manual effort.
                 </p>
-                <button className="bg-primary hover:bg-emerald-600 text-white px-8 py-3.5 rounded-full text-base font-bold transition-colors inline-flex items-center gap-2 group">
+                <Link to="/contact" className="bg-[#0F6E56] hover:bg-[#1D9E75] text-white px-8 py-3.5 rounded-full text-base font-bold transition-colors inline-flex items-center gap-2 group">
                   Book a Demo
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
+                </Link>
               </FadeIn>
             </div>
 
             <FadeIn delay={0.2} className="relative hidden lg:flex items-center justify-center">
               <div className="relative w-56 h-56">
-                <div className="absolute inset-0 bg-green-50 rounded-full border border-green-100 flex items-center justify-center">
-                  <RefreshCw className="w-16 h-16 text-primary opacity-80" strokeWidth={1.5} />
+                <div className="absolute inset-0 bg-[#E1F5EE] rounded-full border border-[#1D9E75]/10 flex items-center justify-center">
+                  <RefreshCw className="w-16 h-16 text-[#0F6E56] opacity-80" strokeWidth={1.5} />
                 </div>
-                <div className="absolute top-2 -left-2 w-12 h-12 bg-white rounded-full shadow-sm border border-gray-100 flex items-center justify-center">
-                  <ShoppingCart className="w-5 h-5 text-emerald-500" />
+                <div className="absolute top-2 -left-2 w-12 h-12 bg-white rounded-full shadow-sm border border-[#F9FAFB] flex items-center justify-center">
+                  <ShoppingCart className="w-5 h-5 text-[#1D9E75]" />
                 </div>
-                <div className="absolute bottom-4 -right-2 w-12 h-12 bg-white rounded-full shadow-sm border border-gray-100 flex items-center justify-center">
+                <div className="absolute bottom-4 -right-2 w-12 h-12 bg-white rounded-full shadow-sm border border-[#F9FAFB] flex items-center justify-center">
                   <Cloud className="w-5 h-5 text-blue-500" />
                 </div>
               </div>
@@ -144,17 +145,17 @@ const FeaturesPage = () => {
       </section>
 
       {/* SECTION 2 - INTRO */}
-      <section className="py-12 border-b border-gray-100">
+      <section className="py-12 border-b border-[#F9FAFB]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <FadeIn>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-50 border border-gray-200 text-gray-600 text-xs font-bold tracking-widest uppercase mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E1F5EE] border border-[#1D9E75]/10 text-[#0F6E56] text-xs font-bold tracking-widest uppercase mb-6">
               Built for Shopify
             </div>
-            <h2 className="text-3xl font-extrabold text-slate-900 mb-6 tracking-tight">
+            <h2 className="text-3xl font-extrabold text-[#111827] mb-6 tracking-tight">
               The complete Shopify-Salesforce sync toolkit
             </h2>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              Most integration tools give you a basic one-way data push and call it done. Syncify gives you full control <strong className="text-slate-800 font-semibold">bi-directional sync, custom field mapping, multi-store management, and transparent monitoring</strong>everything your team needs to run on accurate data, every day.
+            <p className="text-lg text-[#6B7280] leading-relaxed">
+              Most integration tools give you a basic one-way data push and call it done. Syncify gives you full control <strong className="text-[#111827] font-semibold">bi-directional sync, custom field mapping, multi-store management, and transparent monitoring</strong>everything your team needs to run on accurate data, every day.
             </p>
           </FadeIn>
         </div>
@@ -163,13 +164,13 @@ const FeaturesPage = () => {
       {/* SECTION 3 - FEATURES DISPLAY (GROUPED SECTIONS WITH ALTERNATING LAYOUT) */}
       <div className="bg-white">
         {featureGroups.map((group, gIdx) => (
-          <div key={gIdx} className="pt-20 pb-8 border-b-8 border-gray-50 last:border-0">
+          <div key={gIdx} className="pt-20 pb-8 border-b-8 border-[#F9FAFB] last:border-0">
             <div className="max-w-6xl mx-auto px-6 mb-12 text-center">
               <FadeIn>
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-green-50 text-primary mb-6 border border-green-100 shadow-sm">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#E1F5EE] text-[#0F6E56] mb-6 border border-[#1D9E75]/10 shadow-sm">
                   <group.icon className="w-8 h-8" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+                <h2 className="text-3xl md:text-4xl font-extrabold text-[#111827] tracking-tight">
                   {group.category}
                 </h2>
               </FadeIn>
@@ -179,20 +180,20 @@ const FeaturesPage = () => {
               {group.features.map((feature, fIdx) => {
                 const isEven = fIdx % 2 === 0;
                 return (
-                  <section key={fIdx} className="py-16 border-b border-gray-100 last:border-0">
+                  <section key={fIdx} className="py-16 border-b border-[#F9FAFB] last:border-0">
                     <div className="max-w-6xl mx-auto px-6">
                       <div className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 ${isEven ? '' : 'lg:flex-row-reverse'}`}>
 
                         {/* TEXT SIDE */}
                         <div className="flex-1 w-full">
                           <FadeIn delay={0.1}>
-                            <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-700 text-[10px] font-bold tracking-widest uppercase mb-5">
+                            <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#E1F5EE] border border-[#1D9E75]/10 text-[#0F6E56] text-[10px] font-bold tracking-widest uppercase mb-5">
                               Feature
                             </div>
-                            <h3 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">
+                            <h3 className="text-3xl md:text-4xl font-extrabold text-[#111827] mb-6 tracking-tight">
                               {feature.title}
                             </h3>
-                            <p className="text-lg text-slate-600 leading-relaxed max-w-xl mb-6">
+                            <p className="text-lg text-[#6B7280] leading-relaxed max-w-xl mb-6">
                               {feature.desc.split('. ').map((sentence, sIdx, arr) => (
                                 <React.Fragment key={sIdx}>
                                   {sentence}{sIdx !== arr.length - 1 ? '.' : ''}
@@ -203,7 +204,7 @@ const FeaturesPage = () => {
 
                             {feature.value && (
                               <div>
-                                <p className="text-green-700 font-bold text-base bg-green-50/50 inline-block px-4 py-2 rounded-lg border border-green-100">
+                                <p className="text-[#0F6E56] font-bold text-base bg-[#E1F5EE]/50 inline-block px-4 py-2 rounded-lg border border-[#1D9E75]/10">
                                   ✨ {feature.value}
                                 </p>
                               </div>
@@ -214,10 +215,10 @@ const FeaturesPage = () => {
                         {/* VISUAL SIDE */}
                         <div className="flex-1 w-full flex justify-center">
                           <FadeIn delay={0.2} className="w-full max-w-md">
-                            <div className="w-full aspect-square bg-gray-50 rounded-xl shadow-md border border-gray-100 flex flex-col items-center justify-center p-8 group relative overflow-hidden">
-                              <div className="absolute inset-0 bg-gradient-to-tr from-white to-green-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                              <feature.icon className="w-24 h-24 text-primary opacity-90 transform group-hover:scale-105 transition-transform duration-500 relative z-10" strokeWidth={1} />
-                              <div className="mt-8 text-sm font-semibold text-gray-400 uppercase tracking-widest relative z-10">
+                            <div className="w-full aspect-square bg-[#F9FAFB] rounded-xl shadow-md border border-[#F9FAFB] flex flex-col items-center justify-center p-8 group relative overflow-hidden">
+                              <div className="absolute inset-0 bg-gradient-to-tr from-white to-[#E1F5EE]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                              <feature.icon className="w-24 h-24 text-[#0F6E56] opacity-90 transform group-hover:scale-105 transition-transform duration-500 relative z-10" strokeWidth={1} />
+                              <div className="mt-8 text-sm font-semibold text-[#6B7280] uppercase tracking-widest relative z-10">
                                 {feature.title}
                               </div>
                             </div>
@@ -235,11 +236,11 @@ const FeaturesPage = () => {
       </div>
 
       {/* SECTION 4 - COMPARISON */}
-      <section className="py-16 bg-white border-t border-gray-100">
+      <section className="py-16 bg-white border-t border-[#F9FAFB]">
         <div className="max-w-5xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
+              <h2 className="text-3xl font-extrabold text-[#111827] tracking-tight">
                 How work changes with Syncify
               </h2>
             </div>
@@ -247,25 +248,25 @@ const FeaturesPage = () => {
             <div className="space-y-6">
               {comparisonData.map((row, idx) => (
                 <FadeIn key={idx}>
-                  <div className="bg-gray-50 rounded-xl p-6 md:p-8 border border-gray-200">
-                    <h4 className="text-lg font-bold text-slate-900 mb-6 pb-4 border-b border-gray-200">{row.scenario}</h4>
+                  <div className="bg-[#F9FAFB] rounded-xl p-6 md:p-8 border border-[#F9FAFB]">
+                    <h4 className="text-lg font-bold text-[#111827] mb-6 pb-4 border-b border-[#F9FAFB]">{row.scenario}</h4>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
                       {/* Without Syncify */}
                       <div className="flex items-start gap-3">
-                        <X className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
+                        <X className="w-5 h-5 text-[#6B7280] flex-shrink-0 mt-0.5" />
                         <div>
-                          <span className="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-1">Without Syncify</span>
-                          <p className="text-gray-600 font-medium leading-relaxed">{row.without}</p>
+                          <span className="text-xs font-bold text-[#6B7280] uppercase tracking-wider block mb-1">Without Syncify</span>
+                          <p className="text-[#6B7280] font-medium leading-relaxed">{row.without}</p>
                         </div>
                       </div>
 
                       {/* With Syncify */}
                       <div className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" strokeWidth={3} />
+                        <Check className="w-5 h-5 text-[#0F6E56] flex-shrink-0 mt-0.5" strokeWidth={3} />
                         <div>
-                          <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider block mb-1">With Syncify</span>
-                          <p className="text-green-700 font-bold leading-relaxed">{row.with}</p>
+                          <span className="text-xs font-bold text-[#085041] uppercase tracking-wider block mb-1">With Syncify</span>
+                          <p className="text-[#0F6E56] font-bold leading-relaxed">{row.with}</p>
                         </div>
                       </div>
                     </div>
@@ -278,20 +279,20 @@ const FeaturesPage = () => {
       </section>
 
       {/* SECTION 5 - FINAL CTA */}
-      <section className="py-16 bg-white border-t border-gray-100">
+      <section className="py-16 bg-white border-t border-[#F9FAFB]">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <FadeIn>
-            <div className="bg-green-50 rounded-3xl p-10 md:p-16 border border-green-100">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
+            <div className="bg-[#E1F5EE] rounded-3xl p-10 md:p-16 border border-[#1D9E75]/10">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-[#111827] mb-4 tracking-tight">
                 See every feature working
               </h2>
-              <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto">
+              <p className="text-lg text-[#6B7280] mb-8 max-w-xl mx-auto">
                 Our team will walk you through Syncify's full feature set and answer your technical questions.
               </p>
-              <button className="bg-primary hover:bg-emerald-600 text-white px-8 py-3.5 rounded-full text-base font-bold transition-colors inline-flex items-center gap-2 group">
+              <Link to="/contact" className="bg-[#0F6E56] hover:bg-[#1D9E75] text-white px-8 py-3.5 rounded-full text-base font-bold transition-colors inline-flex items-center gap-2 group">
                 Book a Demo
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
             </div>
           </FadeIn>
         </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronDown, CheckCircle2, Sliders, Zap, Link as LinkIcon, Database, ArrowRightLeft } from 'lucide-react';
 import FadeIn from '../components/FadeIn';
 
@@ -56,37 +57,37 @@ const HowItWorksPage = () => {
     <div className="bg-white">
 
       {/* SECTION 1 - HERO */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-green-50 to-white">
+      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#E1F5EE] to-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <FadeIn>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#111827] tracking-tight leading-tight mb-6">
                   Sync Shopify to Salesforce in under 10 minutes
                 </h1>
-                <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                <p className="text-lg text-[#6B7280] mb-8 leading-relaxed">
                   Syncify is built for business teams, not IT departments. There is no code to write, no API to configure, and no developer ticket to raise. Just a straightforward setup that gets your platforms talking to each other in a faster way.
                 </p>
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                  <button className="bg-primary hover:bg-emerald-600 text-white px-8 py-3.5 rounded-full text-base font-bold transition-colors inline-flex items-center gap-2 group shadow-md">
+                  <Link to="/contact" className="bg-[#0F6E56] hover:bg-[#1D9E75] text-white px-8 py-3.5 rounded-full text-base font-bold transition-colors inline-flex items-center gap-2 group shadow-md">
                     Book a Demo
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                  <span className="text-sm text-slate-500 font-medium">We'll walk you through the entire setup live.</span>
+                  </Link>
+                  <span className="text-sm text-[#6B7280] font-medium">We'll walk you through the entire setup live.</span>
                 </div>
               </FadeIn>
             </div>
 
             <FadeIn delay={0.2} className="relative hidden lg:flex items-center justify-center">
               <div className="relative w-64 h-64">
-                <div className="absolute inset-0 bg-green-100/50 rounded-full flex items-center justify-center border border-green-200">
-                  <ArrowRightLeft className="w-16 h-16 text-primary" strokeWidth={1.5} />
+                <div className="absolute inset-0 bg-[#E1F5EE]/50 rounded-full flex items-center justify-center border border-[#1D9E75]/20">
+                  <ArrowRightLeft className="w-16 h-16 text-[#0F6E56]" strokeWidth={1.5} />
                 </div>
-                <div className="absolute top-4 -left-6 w-14 h-14 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center">
+                <div className="absolute top-4 -left-6 w-14 h-14 bg-white rounded-full shadow-lg border border-[#F9FAFB] flex items-center justify-center">
                   <Database className="w-6 h-6 text-blue-500" />
                 </div>
-                <div className="absolute bottom-4 -right-6 w-14 h-14 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center">
-                  <Sliders className="w-6 h-6 text-emerald-500" />
+                <div className="absolute bottom-4 -right-6 w-14 h-14 bg-white rounded-full shadow-lg border border-[#F9FAFB] flex items-center justify-center">
+                  <Sliders className="w-6 h-6 text-[#1D9E75]" />
                 </div>
               </div>
             </FadeIn>
@@ -95,36 +96,36 @@ const HowItWorksPage = () => {
       </section>
 
       {/* SECTION 2 - STEP-BY-STEP */}
-      <section className="py-24 border-b border-gray-100 bg-white">
+      <section className="py-24 border-b border-[#F9FAFB] bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-16">
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-50 border border-green-100 text-primary text-xs font-bold tracking-widest uppercase mb-4">
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#E1F5EE] border border-[#1D9E75]/10 text-[#0F6E56] text-xs font-bold tracking-widest uppercase mb-4">
                 THE SETUP PROCESS
               </div>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-[#111827] tracking-tight">
                 Four steps to a fully connected stack
               </h2>
             </div>
           </FadeIn>
 
           <div className="relative">
-            <div className="hidden lg:block absolute top-10 left-20 right-20 h-px bg-gradient-to-r from-transparent via-green-200 to-transparent z-0"></div>
+            <div className="hidden lg:block absolute top-10 left-20 right-20 h-px bg-gradient-to-r from-transparent via-[#1D9E75]/20 to-transparent z-0"></div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
               {steps.map((step, idx) => (
                 <FadeIn key={idx} delay={0.1 * idx} className="flex">
-                  <div className="bg-green-50/40 backdrop-blur-sm rounded-2xl p-8 border border-green-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all w-full flex flex-col h-full">
-                    <div className="w-12 h-12 bg-white border border-green-200 text-primary rounded-full flex items-center justify-center text-xl font-extrabold mb-6 shadow-sm">
+                  <div className="bg-[#E1F5EE]/40 backdrop-blur-sm rounded-2xl p-8 border border-[#1D9E75]/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all w-full flex flex-col h-full">
+                    <div className="w-12 h-12 bg-white border border-[#1D9E75]/20 text-[#0F6E56] rounded-full flex items-center justify-center text-xl font-extrabold mb-6 shadow-sm">
                       {step.num}
                     </div>
-                    <h3 className="text-xl font-bold mb-3 text-slate-900 tracking-tight">Step {step.num} — {step.title}</h3>
-                    <p className="text-slate-600 text-base leading-relaxed mb-6 flex-grow">
+                    <h3 className="text-xl font-bold mb-3 text-[#111827] tracking-tight">Step {step.num} — {step.title}</h3>
+                    <p className="text-[#6B7280] text-base leading-relaxed mb-6 flex-grow">
                       {step.desc}
                     </p>
-                    <div className="bg-white p-4 rounded-xl border border-gray-100 mt-auto">
-                      <p className="text-sm font-semibold text-slate-800 mb-1">What happens:</p>
-                      <p className="text-sm text-slate-600 leading-relaxed">{step.happens}</p>
+                    <div className="bg-white p-4 rounded-xl border border-[#F9FAFB] mt-auto">
+                      <p className="text-sm font-semibold text-[#111827] mb-1">What happens:</p>
+                      <p className="text-sm text-[#6B7280] leading-relaxed">{step.happens}</p>
                     </div>
                   </div>
                 </FadeIn>
@@ -135,29 +136,29 @@ const HowItWorksPage = () => {
       </section>
 
       {/* SECTION 3 - WHAT GETS SYNCED */}
-      <section className="py-24 bg-white border-b border-gray-100">
+      <section className="py-24 bg-white border-b border-[#F9FAFB]">
         <div className="max-w-4xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-12">
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-50 border border-green-100 text-primary text-xs font-bold tracking-widest uppercase mb-4">
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#E1F5EE] border border-[#1D9E75]/10 text-[#0F6E56] text-xs font-bold tracking-widest uppercase mb-4">
                 DATA OBJECTS COVERED
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
-              <div className="grid grid-cols-2 bg-slate-50 border-b border-gray-200 p-4 px-6 md:px-10">
-                <div className="text-xs font-bold text-slate-500 tracking-widest uppercase">Shopify Object</div>
-                <div className="text-xs font-bold text-slate-500 tracking-widest uppercase">Salesforce Object</div>
+            <div className="bg-white rounded-2xl border border-[#F9FAFB] shadow-sm overflow-hidden">
+              <div className="grid grid-cols-2 bg-[#F9FAFB] border-b border-[#F9FAFB] p-4 px-6 md:px-10">
+                <div className="text-xs font-bold text-[#6B7280] tracking-widest uppercase">Shopify Object</div>
+                <div className="text-xs font-bold text-[#6B7280] tracking-widest uppercase">Salesforce Object</div>
               </div>
-              <div className="divide-y divide-gray-100">
+              <div className="divide-y divide-[#F9FAFB]">
                 {mappedObjects.map((obj, idx) => (
-                  <div key={idx} className="grid grid-cols-2 p-4 px-6 md:px-10 hover:bg-slate-50/50 transition-colors">
-                    <div className="font-semibold text-slate-800 flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-primary opacity-70" />
+                  <div key={idx} className="grid grid-cols-2 p-4 px-6 md:px-10 hover:bg-[#F9FAFB]/50 transition-colors">
+                    <div className="font-semibold text-[#111827] flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#0F6E56] opacity-70" />
                       {obj.shopify}
                     </div>
-                    <div className="font-medium text-slate-600 flex items-center">
-                      <ArrowRight className="w-3 h-3 text-gray-300 mr-3 hidden sm:block" />
+                    <div className="font-medium text-[#6B7280] flex items-center">
+                      <ArrowRight className="w-3 h-3 text-[#6B7280]/40 mr-3 hidden sm:block" />
                       {obj.salesforce}
                     </div>
                   </div>
@@ -169,11 +170,11 @@ const HowItWorksPage = () => {
       </section>
 
       {/* SECTION 4 - FAQ */}
-      <section className="py-24 bg-gray-50 border-b border-gray-100">
+      <section className="py-24 bg-[#F9FAFB] border-b border-[#F9FAFB]">
         <div className="max-w-3xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-12">
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 border border-green-200 text-primary text-xs font-bold tracking-widest uppercase mb-4">
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#E1F5EE] border border-[#1D9E75]/20 text-[#0F6E56] text-xs font-bold tracking-widest uppercase mb-4">
                 FREQUENTLY ASKED QUESTIONS
               </div>
             </div>
@@ -182,16 +183,16 @@ const HowItWorksPage = () => {
               {faqs.map((faq, idx) => {
                 const isOpen = openFaq === idx;
                 return (
-                  <div key={idx} className="bg-white rounded-xl border border-gray-200 overflow-hidden transition-all shadow-sm">
+                  <div key={idx} className="bg-white rounded-xl border border-[#F9FAFB] overflow-hidden transition-all shadow-sm">
                     <button 
                       onClick={() => setOpenFaq(isOpen ? null : idx)}
                       className="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none"
                     >
-                      <span className="font-bold text-slate-900 text-lg pr-4">{faq.q}</span>
-                      <ChevronDown className={`w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
+                      <span className="font-bold text-[#111827] text-lg pr-4">{faq.q}</span>
+                      <ChevronDown className={`w-5 h-5 text-[#6B7280] transition-transform duration-300 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
                     </button>
                     <div className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 pb-5 opacity-100' : 'max-h-0 opacity-0'}`}>
-                      <p className="text-slate-600 leading-relaxed">{faq.a}</p>
+                      <p className="text-[#6B7280] leading-relaxed">{faq.a}</p>
                     </div>
                   </div>
                 );
@@ -202,21 +203,21 @@ const HowItWorksPage = () => {
       </section>
 
       {/* SECTION 5 - FINAL CTA */}
-      <section className="py-24 bg-green-50 relative overflow-hidden">
+      <section className="py-24 bg-[#E1F5EE] relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <FadeIn>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#111827] mb-6 tracking-tight">
               Still have questions? Let's walk through it together.
             </h2>
-            <p className="text-lg text-slate-600 mb-8 max-w-xl mx-auto leading-relaxed">
+            <p className="text-lg text-[#6B7280] mb-8 max-w-xl mx-auto leading-relaxed">
               Book a 30-minute demo and our team will show you exactly how Syncify works with your Shopify store and Salesforce setup.
             </p>
             <div className="flex flex-col items-center gap-4">
-              <button className="bg-primary hover:bg-emerald-600 text-white px-8 py-3.5 rounded-full text-base font-bold transition-colors inline-flex items-center gap-2 shadow-md hover:-translate-y-0.5">
+              <Link to="/contact" className="bg-[#0F6E56] hover:bg-[#1D9E75] text-white px-8 py-3.5 rounded-full text-base font-bold transition-colors inline-flex items-center gap-2 shadow-md hover:-translate-y-0.5">
                 Book a Demo
                 <ArrowRight className="w-4 h-4" />
-              </button>
-              <div className="flex items-center justify-center gap-2 text-sm text-slate-500 font-medium flex-wrap">
+              </Link>
+              <div className="flex items-center justify-center gap-2 text-sm text-[#6B7280] font-medium flex-wrap">
                 <span>30 minutes</span>
                 <span>·</span>
                 <span>No commitment</span>
