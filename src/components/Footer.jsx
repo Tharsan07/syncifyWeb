@@ -1,5 +1,6 @@
 import React from 'react';
 import { RefreshCw } from 'lucide-react';
+import logo from '../assets/Syncify.svg';
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8 mb-16">
           <div className="md:col-span-4 lg:col-span-5">
             <div className="flex items-center gap-3 mb-6">
-              <img src="./src/assets/Syncify.svg" alt="Syncify Logo" className="w-10 h-10" />
+              <img src={logo} alt="Syncify Logo" className="w-10 h-10" />
               <span className="font-extrabold text-2xl text-slate-900 tracking-tight">Syncify</span>
             </div>
             <p className="text-slate-500 text-base font-medium max-w-xs mb-8 leading-relaxed">

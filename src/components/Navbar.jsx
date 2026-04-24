@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X as XIcon, RefreshCw } from 'lucide-react';
+import logo from '../assets/Syncify.svg';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -30,7 +31,7 @@ const Navbar = () => {
             {/* Logo Container */}
             <div className="w-12 h-12 flex items-center justify-center flex-shrink-0">
               <img
-                src="../src/assets/Syncify.svg"
+                src={logo}
                 alt="Syncify Logo"
                 className="w-full h-full object-contain"
               />
