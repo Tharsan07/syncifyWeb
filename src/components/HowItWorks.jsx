@@ -7,7 +7,7 @@ const HowItWorks = () => {
     <section id="how-it-works" className="py-24 bg-[#F8FAFC] relative overflow-hidden z-0 border-b border-slate-100">
       <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-primary/10 rounded-full blur-[150px] -z-10 pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-[30rem] h-[30rem] bg-emerald-500/10 rounded-full blur-[150px] -z-10 pointer-events-none"></div>
-      
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-20">
@@ -55,7 +55,7 @@ const HowItWorks = () => {
             </div>
             <button className="bg-primary hover:bg-emerald-600 text-white px-8 py-4 rounded-full text-base font-extrabold transition-all flex items-center gap-2 group w-full sm:w-auto justify-center shadow-[0_8px_30px_rgb(79,166,79,0.3)] hover:-translate-y-0.5 relative z-10">
               <PlayCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              Book a Demo 
+              Book a Demo
             </button>
           </div>
         </FadeIn>
