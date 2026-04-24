@@ -117,7 +117,7 @@ const FeaturesPage = () => {
                   Every feature you need to stay in sync
                 </h1>
                 <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                  See every feature in action live, with your questions answered.
+                  Syncify is purpose-built for ecommerce teams that run on Salesforce. Every feature is designed to eliminate data friction, improve visibility, and keep your platforms aligned  without any manual effort.
                 </p>
                 <button className="bg-primary hover:bg-emerald-600 text-white px-8 py-3.5 rounded-full text-base font-bold transition-colors inline-flex items-center gap-2 group">
                   Book a Demo
