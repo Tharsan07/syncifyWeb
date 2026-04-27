@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Check, 
-  X, 
-  ArrowRight, 
-  ChevronDown, 
-  Plus, 
-  Minus, 
+import {
+  Check,
+  X,
+  ArrowRight,
+  ChevronDown,
+  Plus,
+  Minus,
   HelpCircle,
   Zap,
   ShieldCheck,
@@ -46,10 +46,10 @@ const Pricing = () => {
   ];
 
   const proFeatures = [
-    "Full bi-directional sync — changes in Salesforce reflect back in Shopify automatically",
+    "Full bi-directional sync ",
     "Salesforce to Shopify product and pricing updates",
     "Salesforce to Shopify customer record sync",
-    "Advanced conflict resolution — intelligent handling of simultaneous edits in both platforms",
+    "Advanced conflict resolution ",
     "Priority support with faster response times",
     "Dedicated onboarding assistance from the Syncify team"
   ];
@@ -128,11 +128,10 @@ const Pricing = () => {
             <p className="text-lg md:text-xl text-[#6B7280] mb-12 max-w-2xl mx-auto leading-relaxed">
               Choose the plan that fits your team's needs. Both plans include a free 7-day trial with no credit card required to get started.
             </p>
-            
+
             {/* Trust Badges */}
             <div className="flex flex-wrap justify-center gap-6 mb-12">
               {[
-                { icon: Zap, label: "7 Day Free Trial" },
                 { icon: CreditCard, label: "No Credit Card Required" },
                 { icon: Calendar, label: "Cancel Anytime" }
               ].map((badge, idx) => (
@@ -167,10 +166,10 @@ const Pricing = () => {
                     <span className="text-4xl font-black text-[#111827]">$20</span>
                     <span className="text-[#6B7280] font-bold">USD / user / month</span>
                   </div>
-                  <p className="text-sm font-bold text-[#0F6E56] mb-6">
-                    Free trial available for 7 days no credit card required
+                  <p className="text-xs font-medium text-gray-500 mb-6">
+                    Includes a 7-day free trial with no credit card required.
                   </p>
-                  
+
                   <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#E1F5EE] rounded-xl border border-[#0F6E56]/10 mb-8">
                     <ArrowRight className="w-4 h-4 text-[#0F6E56]" />
                     <span className="text-xs font-black text-[#0F6E56] uppercase tracking-wider">Shopify to Salesforce (one-way)</span>
@@ -188,8 +187,11 @@ const Pricing = () => {
                   ))}
                 </div>
 
-                <div className="pt-8 border-t border-gray-50 mt-auto">
-                  <Link to="/contact" className="w-full inline-flex items-center justify-center gap-2 bg-[#F9FAFB] hover:bg-[#E1F5EE] text-[#111827] hover:text-[#0F6E56] px-8 py-4 rounded-full text-lg font-bold transition-all border border-gray-200 hover:border-[#0F6E56]/20 mb-4">
+                <div className="pt-8 border-t border-gray-50 mt-auto flex flex-col gap-3">
+                  <Link to="/contact" className="w-full inline-flex items-center justify-center gap-2 bg-[#0F6E56] hover:bg-[#085041] text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-md">
+                    Start Free Trial
+                  </Link>
+                  <Link to="/contact" className="w-full inline-flex items-center justify-center gap-2 bg-transparent hover:bg-green-50 text-[#0F6E56] px-8 py-4 rounded-xl text-lg font-bold transition-all border border-[#0F6E56] mb-2">
                     Book a Demo
                   </Link>
                   <p className="text-center text-xs text-gray-400 font-bold uppercase tracking-widest">
@@ -218,10 +220,10 @@ const Pricing = () => {
                     <span className="text-4xl font-black text-[#111827]">$30</span>
                     <span className="text-[#6B7280] font-bold">USD / user / month</span>
                   </div>
-                  <p className="text-sm font-bold text-[#0F6E56] mb-6">
-                    Free trial available for 7 days no credit card required
+                  <p className="text-xs font-medium text-gray-500 mb-6">
+                    Includes a 7-day free trial with no credit card required.
                   </p>
-                  
+
                   <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0F6E56] to-[#1D9E75] rounded-xl shadow-lg mb-4">
                     <ArrowRightLeft className="w-4 h-4 text-white" />
                     <span className="text-xs font-black text-white uppercase tracking-wider">Shopify and Salesforce fully bi-directional</span>
@@ -247,10 +249,12 @@ const Pricing = () => {
                   </div>
                 </div>
 
-                <div className="pt-8 border-t border-gray-50 mt-auto">
-                  <Link to="/contact" className="w-full inline-flex items-center justify-center gap-2 bg-[#0F6E56] hover:bg-[#085041] text-white px-8 py-4 rounded-full text-lg font-bold transition-all shadow-xl hover:-translate-y-1 mb-4 group">
+                <div className="pt-8 border-t border-gray-50 mt-auto flex flex-col gap-3">
+                  <Link to="/contact" className="w-full inline-flex items-center justify-center gap-2 bg-[#0F6E56] hover:bg-[#085041] text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-md">
+                    Start Free Trial
+                  </Link>
+                  <Link to="/contact" className="w-full inline-flex items-center justify-center gap-2 bg-transparent hover:bg-green-50 text-[#0F6E56] px-8 py-4 rounded-xl text-lg font-bold transition-all border border-[#0F6E56] mb-2 group">
                     Book a Demo
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <p className="text-center text-xs text-gray-400 font-bold uppercase tracking-widest">
                     Talk to our team about Pro
@@ -267,15 +271,6 @@ const Pricing = () => {
         <div className="max-w-6xl mx-auto px-6">
           <FadeIn className="text-center mb-12">
             <div className="flex flex-wrap justify-center gap-3 mb-8">
-              <span className="px-4 py-1.5 rounded-full bg-white border border-gray-200 text-[#6B7280] text-[10px] font-black uppercase tracking-widest shadow-sm">
-                Most Affordable: Standard
-              </span>
-              <span className="px-4 py-1.5 rounded-full bg-[#E1F5EE] border border-[#0F6E56]/10 text-[#0F6E56] text-[10px] font-black uppercase tracking-widest shadow-sm">
-                Best for Growth: Pro
-              </span>
-              <span className="px-4 py-1.5 rounded-full bg-white border border-gray-200 text-[#6B7280] text-[10px] font-black uppercase tracking-widest shadow-sm">
-                7 Day Trial: Both
-              </span>
             </div>
             <h2 className="text-3xl md:text-4xl font-extrabold text-[#111827] tracking-tight mb-4">
               Compare plans in detail
@@ -301,7 +296,7 @@ const Pricing = () => {
                     {category.features.map((row, idx) => (
                       <div key={idx} className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center px-6 py-3 hover:bg-gray-50 transition-colors group">
                         <div className="md:col-span-6 text-sm font-medium text-gray-700">{row.name}</div>
-                        
+
                         {/* Standard Value */}
                         <div className="md:col-span-3 flex justify-center md:justify-center">
                           <div className="md:hidden text-[10px] font-black text-gray-400 uppercase tracking-widest mr-4">Standard:</div>
@@ -357,7 +352,7 @@ const Pricing = () => {
               return (
                 <FadeIn key={idx} delay={0.1 * idx}>
                   <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden transition-all shadow-sm hover:shadow-md">
-                    <button 
+                    <button
                       onClick={() => setOpenFaq(isOpen ? null : idx)}
                       className="w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none group"
                     >
@@ -368,7 +363,7 @@ const Pricing = () => {
                     </button>
                     <AnimatePresence>
                       {isOpen && (
-                        <motion.div 
+                        <motion.div
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: 'auto', opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
@@ -394,7 +389,7 @@ const Pricing = () => {
           <FadeIn>
             <div className="bg-gradient-to-br from-[#E1F5EE] to-white rounded-[3rem] p-12 md:p-20 border border-[#0F6E56]/10 shadow-2xl shadow-[#0F6E56]/5 relative overflow-hidden text-center">
               <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-white/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 -z-0"></div>
-              
+
               <div className="relative z-10 max-w-2xl mx-auto">
                 <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-lg border border-[#0F6E56]/10">
                   <MessageSquare className="w-8 h-8 text-[#0F6E56]" />

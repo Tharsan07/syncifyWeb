@@ -104,7 +104,7 @@ const HowItWorksPage = () => {
                 THE SETUP PROCESS
               </div>
               <h2 className="text-3xl md:text-4xl font-extrabold text-[#111827] tracking-tight">
-                Four steps to a fully connected stack
+                Three steps to a fully connected stack
               </h2>
             </div>
           </FadeIn>
@@ -119,7 +119,7 @@ const HowItWorksPage = () => {
                     <div className="w-12 h-12 bg-white border border-[#1D9E75]/20 text-[#0F6E56] rounded-full flex items-center justify-center text-xl font-extrabold mb-6 shadow-sm">
                       {step.num}
                     </div>
-                    <h3 className="text-xl font-bold mb-3 text-[#111827] tracking-tight">Step {step.num} — {step.title}</h3>
+                    <h3 className="text-xl font-bold mb-3 text-[#111827] tracking-tight">{step.title}</h3>
                     <p className="text-[#6B7280] text-base leading-relaxed mb-6 flex-grow">
                       {step.desc}
                     </p>

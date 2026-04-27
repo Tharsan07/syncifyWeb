@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  TrendingUp, 
-  Headphones, 
-  Settings, 
-  CheckCircle2, 
-  Zap, 
-  Code, 
+import {
+  ArrowRight,
+  TrendingUp,
+  Headphones,
+  Settings,
+  CheckCircle2,
+  Zap,
+  Code,
   Layers,
   ShoppingBag,
   Package,
@@ -39,7 +39,7 @@ const UseCasesPage = () => {
   ];
 
   const operationsBenefits = [
-    { title: "Automated Order Sync", desc: "From Shopify to Salesforce — zero manual intervention required." },
+    { title: "Automated Order Sync", desc: "From Shopify to Salesforce;zero manual intervention required." },
     { title: "Inventory Levels", desc: "Sync in real time so operations always knows what is in stock." },
     { title: "Multi-Store Ready", desc: "Multiple Shopify stores visible in a single Salesforce environment." },
     { title: "Error Monitoring", desc: "Dashboard surfaces sync issues before they become business problems." },
@@ -47,25 +47,25 @@ const UseCasesPage = () => {
   ];
 
   const industries = [
-    { 
-      title: "Direct-to-Consumer (D2C) Brands", 
-      icon: ShoppingBag, 
-      desc: "Connect your flagship storefront with your CRM to deliver personalized experiences at scale." 
+    {
+      title: "Direct-to-Consumer (D2C) Brands",
+      icon: ShoppingBag,
+      desc: "Connect your flagship storefront with your CRM to deliver personalized experiences at scale."
     },
-    { 
-      title: "Subscription Commerce", 
-      icon: RefreshCw, 
-      desc: "Manage recurring revenue and customer lifecycles with perfectly synced subscription data." 
+    {
+      title: "Subscription Commerce",
+      icon: RefreshCw,
+      desc: "Manage recurring revenue and customer lifecycles with perfectly synced subscription data."
     },
-    { 
-      title: "B2B Wholesale", 
-      icon: Package, 
-      desc: "Handle bulk orders, custom pricing, and trade accounts with enterprise-grade synchronization." 
+    {
+      title: "B2B Wholesale",
+      icon: Package,
+      desc: "Handle bulk orders, custom pricing, and trade accounts with enterprise-grade synchronization."
     },
-    { 
-      title: "Multi-Channel Retail", 
-      icon: Store, 
-      desc: "Unify data from multiple Shopify storefronts into a single Salesforce source of truth." 
+    {
+      title: "Multi-Channel Retail",
+      icon: Store,
+      desc: "Unify data from multiple Shopify storefronts into a single Salesforce source of truth."
     }
   ];
 
@@ -80,7 +80,7 @@ const UseCasesPage = () => {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-[1.1]">
                   Built for every team that touches <span className="text-[#0F6E56]">ecommerce data</span>
                 </h1>
-                
+
                 <div className="space-y-4 max-w-2xl">
                   <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                     <strong>Syncify is more than an integration.</strong> It is a strategic business tool designed to unify your ecosystem.
@@ -96,7 +96,7 @@ const UseCasesPage = () => {
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
-                
+
                 <div className="flex flex-wrap items-center gap-8 pt-4">
                   {[
                     { icon: Zap, label: "Real Time Sync" },
@@ -132,7 +132,7 @@ const UseCasesPage = () => {
                         Live Now
                       </div>
                     </div>
-                    
+
                     <div className="space-y-4">
                       {[1, 2, 3].map((i) => (
                         <div key={i} className="bg-white p-5 rounded-xl border border-gray-100 flex items-center justify-between shadow-sm">
@@ -166,64 +166,59 @@ const UseCasesPage = () => {
       {/* SECTION 2 - SALES TEAM USE CASE */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl mb-16 space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            {/* Left Column */}
             <FadeIn>
-              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#E1F5EE] text-[#0F6E56] text-xs font-black tracking-widest uppercase border border-[#0F6E56]/10">
-                FOR SALES TEAMS
-              </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
-                Close more deals with real-time customer and order data
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                <strong>Your sales reps should not have to chase data.</strong> When Shopify and Salesforce are in sync, your team walks into every conversation with a complete picture of the customer.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Purchase history, order frequency, and lifetime value are all readily available directly within Salesforce records.
-              </p>
-            </FadeIn>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-stretch">
-            <div className="lg:col-span-3">
-              <FadeIn delay={0.2}>
-                <div className="h-full bg-gray-50 rounded-2xl p-8 md:p-10 border border-gray-100 shadow-lg shadow-gray-200/50">
-                  <h4 className="text-xl font-extrabold text-gray-900 mb-8">What changes for your sales team:</h4>
-                  <div className="space-y-6">
-                    {salesBenefits.map((benefit, idx) => (
-                      <div key={idx} className="flex items-start gap-4 group">
-                        <div className="w-6 h-6 rounded-full bg-white border border-gray-200 flex items-center justify-center flex-shrink-0 mt-1 shadow-sm group-hover:border-[#0F6E56] group-hover:bg-[#0F6E56] transition-all">
-                          <Check className="w-3.5 h-3.5 text-[#0F6E56] group-hover:text-white transition-colors" strokeWidth={3} />
-                        </div>
-                        <p className="text-gray-600 font-medium leading-relaxed group-hover:text-gray-900 transition-colors">
-                          {benefit}
-                        </p>
+              <div className="max-w-2xl space-y-8">
+                <div className="space-y-6">
+                  <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#E1F5EE] text-[#0F6E56] text-xs font-black tracking-widest uppercase border border-[#0F6E56]/10">
+                    FOR SALES TEAMS
+                  </div>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#111827] tracking-tight leading-tight">
+                    Close more deals with real-time customer and order data
+                  </h2>
+                  <p className="text-lg text-gray-600 leading-8">
+                    Your sales reps should not have to chase data. When Shopify and Salesforce are in sync, your team walks into every conversation with a complete picture of the customer.
+                  </p>
+                  <p className="text-lg text-gray-600 leading-8">
+                    Purchase history, order frequency, and lifetime value are all readily available directly within Salesforce records.
+                  </p>
+                </div>
+                
+                <div className="space-y-5 pt-4">
+                  {salesBenefits.map((benefit, idx) => (
+                    <div key={idx} className="flex items-start gap-4 group">
+                      <div className="w-6 h-6 rounded-full bg-white border border-gray-200 flex items-center justify-center flex-shrink-0 mt-1 shadow-sm group-hover:border-[#0F6E56] group-hover:bg-[#0F6E56] transition-all">
+                        <Check className="w-3.5 h-3.5 text-[#0F6E56] group-hover:text-white transition-colors" strokeWidth={3} />
                       </div>
-                    ))}
-                  </div>
-                </div>
-              </FadeIn>
-            </div>
-
-            <div className="lg:col-span-2">
-              <FadeIn delay={0.3}>
-                <div className="h-full bg-[#0F6E56] rounded-2xl p-8 md:p-10 border border-[#0F6E56] shadow-xl shadow-[#0F6E56]/20 flex flex-col justify-center">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center">
-                      <TrendingUp className="w-7 h-7 text-white" />
+                      <p className="text-gray-600 font-medium leading-relaxed group-hover:text-[#111827] transition-colors">
+                        {benefit}
+                      </p>
                     </div>
-                    <h4 className="text-2xl font-extrabold text-white tracking-tight">Sales Outcome</h4>
-                  </div>
-                  <div className="space-y-4">
-                    <p className="text-white text-lg font-medium leading-relaxed">
-                      Sales teams report <strong>5x faster deal cycles</strong> and significantly higher confidence in their CRM data.
-                    </p>
-                    <p className="text-[#E1F5EE] text-lg font-medium leading-relaxed">
-                      When reps trust the data, they use it—and that fundamentally transforms your results.
-                    </p>
-                  </div>
+                  ))}
                 </div>
-              </FadeIn>
-            </div>
+              </div>
+            </FadeIn>
+
+            {/* Right Column */}
+            <FadeIn delay={0.2}>
+              <div className="w-full bg-[#0F6E56] rounded-3xl p-8 md:p-12 border border-[#0F6E56] shadow-xl shadow-[#0F6E56]/20 flex flex-col justify-center">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center">
+                    <TrendingUp className="w-7 h-7 text-white" />
+                  </div>
+                  <h4 className="text-2xl font-extrabold text-white tracking-tight">Sales Outcome</h4>
+                </div>
+                <div className="space-y-6">
+                  <p className="text-white text-lg font-medium leading-relaxed">
+                    Sales teams report <strong>5x faster deal cycles</strong> and significantly higher confidence in their CRM data.
+                  </p>
+                  <p className="text-[#E1F5EE] text-lg font-medium leading-relaxed">
+                    When reps trust the data, they use it—and that fundamentally transforms your results.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -231,64 +226,59 @@ const UseCasesPage = () => {
       {/* SECTION 3 - SUPPORT TEAM USE CASE */}
       <section className="py-24 bg-gray-50 border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl mb-16 space-y-6 lg:ml-auto lg:text-right">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            {/* Left Column */}
             <FadeIn>
-              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#E1F5EE] text-[#0F6E56] text-xs font-black tracking-widest uppercase border border-[#0F6E56]/10">
-                FOR SUPPORT TEAMS
-              </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
-                Resolve customer issues faster with full order context
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                <strong>Stop putting customers on hold.</strong> Nothing slows a support interaction down like a rep who has to look up an order in another system.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                With Syncify, every Salesforce case is backed by live Shopify data, ensuring agents have everything they need immediately.
-              </p>
-            </FadeIn>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-stretch">
-            <div className="lg:col-span-2 lg:order-2">
-              <FadeIn delay={0.2}>
-                <div className="h-full bg-white rounded-2xl p-8 md:p-10 border border-gray-100 shadow-xl shadow-[#0F6E56]/5 flex flex-col justify-center">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-[#E1F5EE] flex items-center justify-center">
-                      <Headphones className="w-7 h-7 text-[#0F6E56]" />
-                    </div>
-                    <h4 className="text-2xl font-extrabold text-gray-900 tracking-tight">Support Outcome</h4>
+              <div className="max-w-2xl space-y-8">
+                <div className="space-y-6">
+                  <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#E1F5EE] text-[#0F6E56] text-xs font-black tracking-widest uppercase border border-[#0F6E56]/10">
+                    FOR SUPPORT TEAMS
                   </div>
-                  <div className="space-y-4">
-                    <p className="text-gray-700 text-lg font-medium leading-relaxed">
-                      First-contact resolution rates improve significantly when support agents have accurate, real-time order data.
-                    </p>
-                    <p className="text-[#0F6E56] text-lg font-bold leading-relaxed">
-                      Customers spend less time repeating themselves and more time being heard.
-                    </p>
-                  </div>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#111827] tracking-tight leading-tight">
+                    Resolve customer issues faster with full order context
+                  </h2>
+                  <p className="text-lg text-gray-600 leading-8">
+                    Stop putting customers on hold. Nothing slows a support interaction down like a rep who has to look up an order in another system.
+                  </p>
+                  <p className="text-lg text-gray-600 leading-8">
+                    With Syncify, every Salesforce case is backed by live Shopify data, ensuring agents have everything they need immediately.
+                  </p>
                 </div>
-              </FadeIn>
-            </div>
-
-            <div className="lg:col-span-3 lg:order-1">
-              <FadeIn delay={0.3}>
-                <div className="h-full bg-white rounded-2xl p-8 md:p-10 border border-gray-100 shadow-lg shadow-gray-200/50">
-                  <h4 className="text-xl font-extrabold text-gray-900 mb-8">What changes for your support team:</h4>
-                  <div className="space-y-6">
-                    {supportBenefits.map((benefit, idx) => (
-                      <div key={idx} className="flex items-start gap-4 group">
-                        <div className="w-6 h-6 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center flex-shrink-0 mt-1 shadow-sm group-hover:border-[#0F6E56] group-hover:bg-[#0F6E56] transition-all">
-                          <Check className="w-3.5 h-3.5 text-[#0F6E56] group-hover:text-white transition-colors" strokeWidth={3} />
-                        </div>
-                        <p className="text-gray-600 font-medium leading-relaxed group-hover:text-gray-900 transition-colors">
-                          {benefit}
-                        </p>
+                
+                <div className="space-y-5 pt-4">
+                  {supportBenefits.map((benefit, idx) => (
+                    <div key={idx} className="flex items-start gap-4 group">
+                      <div className="w-6 h-6 rounded-full bg-white border border-gray-200 flex items-center justify-center flex-shrink-0 mt-1 shadow-sm group-hover:border-[#0F6E56] group-hover:bg-[#0F6E56] transition-all">
+                        <Check className="w-3.5 h-3.5 text-[#0F6E56] group-hover:text-white transition-colors" strokeWidth={3} />
                       </div>
-                    ))}
-                  </div>
+                      <p className="text-gray-600 font-medium leading-relaxed group-hover:text-[#111827] transition-colors">
+                        {benefit}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-              </FadeIn>
-            </div>
+              </div>
+            </FadeIn>
+
+            {/* Right Column */}
+            <FadeIn delay={0.2}>
+              <div className="w-full bg-white rounded-3xl p-8 md:p-12 border border-gray-100 shadow-xl shadow-[#0F6E56]/5 flex flex-col justify-center">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-14 h-14 rounded-2xl bg-[#E1F5EE] flex items-center justify-center">
+                    <Headphones className="w-7 h-7 text-[#0F6E56]" />
+                  </div>
+                  <h4 className="text-2xl font-extrabold text-[#111827] tracking-tight">Support Outcome</h4>
+                </div>
+                <div className="space-y-6">
+                  <p className="text-gray-700 text-lg font-medium leading-relaxed">
+                    First-contact resolution rates improve significantly when support agents have accurate, real-time order data.
+                  </p>
+                  <p className="text-[#0F6E56] text-lg font-bold leading-relaxed">
+                    Customers spend less time repeating themselves and more time being heard.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -296,62 +286,60 @@ const UseCasesPage = () => {
       {/* SECTION 4 - OPERATIONS TEAM USE CASE */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl mb-16 space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            {/* Left Column */}
             <FadeIn>
-              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#E1F5EE] text-[#0F6E56] text-xs font-black tracking-widest uppercase border border-[#0F6E56]/10">
-                FOR OPERATIONS TEAMS
-              </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight">
-                Eliminate manual data work and run a cleaner operation
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                <strong>Stop managing pipelines, start managing growth.</strong> Manual exports, CSV uploads, and scheduled syncs are sources of error and frustration.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Syncify replaces manual tasks with automated, real-time data flow so your operations team can focus on what matters.
-              </p>
-            </FadeIn>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-stretch">
-            <div className="lg:col-span-3">
-              <FadeIn delay={0.2}>
-                <div className="grid grid-cols-1 gap-4">
+              <div className="max-w-2xl space-y-8">
+                <div className="space-y-6">
+                  <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#E1F5EE] text-[#0F6E56] text-xs font-black tracking-widest uppercase border border-[#0F6E56]/10">
+                    FOR OPERATIONS TEAMS
+                  </div>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#111827] tracking-tight leading-tight">
+                    Eliminate manual data work and run a cleaner operation
+                  </h2>
+                  <p className="text-lg text-gray-600 leading-8">
+                    Stop managing pipelines, start managing growth. Manual exports, CSV uploads, and scheduled syncs are sources of error and frustration.
+                  </p>
+                  <p className="text-lg text-gray-600 leading-8">
+                    Syncify replaces manual tasks with automated, real-time data flow so your operations team can focus on what matters.
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-1 gap-4 pt-4">
                   {operationsBenefits.map((benefit, idx) => (
-                    <div key={idx} className="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-[#0F6E56]/30 transition-all group flex items-start gap-5">
-                      <div className="w-12 h-12 rounded-xl bg-white border border-gray-200 group-hover:bg-[#E1F5EE] group-hover:border-[#0F6E56]/20 flex items-center justify-center transition-all flex-shrink-0">
-                        <CheckCircle2 className="w-6 h-6 text-gray-400 group-hover:text-[#0F6E56] transition-colors" />
+                    <div key={idx} className="bg-gray-50 p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-[#0F6E56]/30 transition-all group flex items-start gap-5">
+                      <div className="w-10 h-10 rounded-xl bg-white border border-gray-200 group-hover:bg-[#E1F5EE] group-hover:border-[#0F6E56]/20 flex items-center justify-center transition-all flex-shrink-0">
+                        <CheckCircle2 className="w-5 h-5 text-gray-400 group-hover:text-[#0F6E56] transition-colors" />
                       </div>
                       <div>
-                        <h5 className="font-extrabold text-gray-900 mb-1">{benefit.title}</h5>
-                        <p className="text-sm text-gray-600 font-medium leading-relaxed">{benefit.desc}</p>
+                        <h5 className="font-extrabold text-[#111827] mb-1">{benefit.title}</h5>
+                        <p className="text-sm text-gray-600 font-medium leading-relaxed">{benefit.desc.replace(';', ' — ')}</p>
                       </div>
                     </div>
                   ))}
                 </div>
-              </FadeIn>
-            </div>
+              </div>
+            </FadeIn>
 
-            <div className="lg:col-span-2">
-              <FadeIn delay={0.3}>
-                <div className="h-full bg-[#085041] rounded-2xl p-8 md:p-10 border border-[#085041] shadow-xl shadow-[#085041]/20 flex flex-col justify-center">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center">
-                      <Settings className="w-7 h-7 text-white" />
-                    </div>
-                    <h4 className="text-2xl font-extrabold text-white tracking-tight">Operations Outcome</h4>
+            {/* Right Column */}
+            <FadeIn delay={0.2}>
+              <div className="w-full bg-[#085041] rounded-3xl p-8 md:p-12 border border-[#085041] shadow-xl shadow-[#085041]/20 flex flex-col justify-center">
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center">
+                    <Settings className="w-7 h-7 text-white" />
                   </div>
-                  <div className="space-y-4">
-                    <p className="text-white text-lg font-medium leading-relaxed">
-                      Operations teams recover <strong>significant hours every week</strong> by eliminating manual sync processes.
-                    </p>
-                    <p className="text-[#E1F5EE] text-lg font-medium leading-relaxed">
-                      This time is redirected towards process improvement, customer experience, and business growth.
-                    </p>
-                  </div>
+                  <h4 className="text-2xl font-extrabold text-white tracking-tight">Operations Outcome</h4>
                 </div>
-              </FadeIn>
-            </div>
+                <div className="space-y-6">
+                  <p className="text-white text-lg font-medium leading-relaxed">
+                    Operations teams recover <strong>significant hours every week</strong> by eliminating manual sync processes.
+                  </p>
+                  <p className="text-[#E1F5EE] text-lg font-medium leading-relaxed">
+                    This time is redirected towards process improvement, customer experience, and business growth.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -391,15 +379,15 @@ const UseCasesPage = () => {
         <div className="max-w-7xl mx-auto px-6">
           <FadeIn>
             <div className="bg-gradient-to-br from-[#0F6E56] to-[#085041] rounded-[3rem] p-12 md:p-24 shadow-2xl shadow-[#0F6E56]/20 relative overflow-hidden text-center">
-              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-              
+              <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(rgba(255,255,255,0.2) 0.5px, transparent 0.5px)', backgroundSize: '32px 32px' }}></div>
+
               <div className="relative z-10 max-w-4xl mx-auto space-y-10">
                 <h2 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
                   See how Syncify works <br className="hidden md:block" /> for your team
                 </h2>
-                
+
                 <p className="text-xl md:text-2xl text-[#E1F5EE] font-medium leading-relaxed max-w-3xl mx-auto">
-                  Book a 30-minute demo and tell us about your team\'s setup. We\'ll show you exactly how Syncify fits into your workflow.
+                  Book a 30-minute demo and tell us about your team's setup. We'll show you exactly how Syncify fits into your workflow.
                 </p>
 
                 <div className="flex flex-col items-center gap-8">

@@ -49,7 +49,7 @@ const HowItWorks = () => {
 
         <FadeIn delay={0.5}>
           <div className="mt-20 bg-gradient-to-r from-[#E1F5EE]/50 to-white rounded-[2.5rem] p-10 flex flex-col sm:flex-row items-center justify-between border border-[#1D9E75]/20 shadow-xl relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+            <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#0F6E56 0.5px, transparent 0.5px)', backgroundSize: '24px 24px' }}></div>
             <div className="mb-8 sm:mb-0 text-center sm:text-left relative z-10">
               <h4 className="text-2xl font-extrabold mb-2 text-[#111827] tracking-tight">See Syncify in action</h4>
               <p className="text-[#6B7280] font-medium">Live, with your questions answered</p>
