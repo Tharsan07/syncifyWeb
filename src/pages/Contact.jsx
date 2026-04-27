@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  CheckCircle2, 
-  Users, 
   MessageSquare, 
   Mail, 
-  ExternalLink, 
   ChevronRight,
   ArrowRight,
-  Clock,
-  ShieldCheck,
-  Headset,
-  Calendar
+  Headset
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import FadeIn from '../components/FadeIn';
@@ -75,112 +69,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* SECTION 2 - DEMO BOOKING BLOCK */}
-      <section className="py-24 bg-white border-b border-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-            
-            {/* Left Column - What to expect */}
-            <div className="lg:col-span-5">
-              <FadeIn direction="left">
-                <div className="space-y-12">
-                  <div>
-                    <h2 className="text-2xl font-black text-[#111827] mb-8 flex items-center gap-3">
-                      <Clock className="w-6 h-6 text-[#0F6E56]" />
-                      In your 30-minute demo, we'll cover:
-                    </h2>
-                    <ul className="space-y-5">
-                      {[
-                        "A live walkthrough of Syncify — from setup to real-time sync in action",
-                        "How Syncify maps to your specific Shopify store and Salesforce configuration",
-                        "A comparison of the Standard and Pro plans and which suits your team's needs",
-                        "Any questions you have about features, data security, pricing, or onboarding",
-                        "Next steps to get your trial started immediately after the call"
-                      ].map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-4 group">
-                          <div className="w-6 h-6 rounded-full bg-[#E1F5EE] flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-[#0F6E56] transition-colors">
-                            <CheckCircle2 className="w-4 h-4 text-[#0F6E56] group-hover:text-white transition-colors" />
-                          </div>
-                          <span className="text-gray-600 font-medium leading-relaxed">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
 
-                  <div className="bg-gray-50 rounded-[2rem] p-8 border border-gray-100">
-                    <h3 className="text-lg font-black text-[#111827] mb-6 flex items-center gap-3">
-                      <Users className="w-5 h-5 text-[#0F6E56]" />
-                      Who should attend:
-                    </h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {[
-                        "CRM Administrators",
-                        "Salesforce Admins",
-                        "Operations Managers",
-                        "RevOps leads",
-                        "eCommerce Managers",
-                        "IT leads"
-                      ].map((role, idx) => (
-                        <div key={idx} className="flex items-center gap-3 px-4 py-2 bg-white rounded-xl border border-gray-200 text-sm font-bold text-gray-600">
-                          <div className="w-1.5 h-1.5 rounded-full bg-[#0F6E56]/40" />
-                          {role}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </FadeIn>
-            </div>
-
-            {/* Right Column - Booking Widget */}
-            <div className="lg:col-span-7">
-              <FadeIn direction="right">
-                <div className="bg-white rounded-[2.5rem] border border-gray-100 shadow-2xl shadow-[#0F6E56]/5 overflow-hidden min-h-[600px] flex flex-col items-center justify-center relative group">
-                  {/* Background Decoration */}
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#E1F5EE]/50 rounded-full blur-3xl -z-10 -translate-y-1/2 translate-x-1/2 group-hover:scale-110 transition-transform duration-700"></div>
-                  
-                  {/* Placeholder for Calendly */}
-                  <div className="w-full h-full flex flex-col items-center justify-center p-8 text-center">
-                    <div className="w-20 h-20 bg-gray-50 rounded-3xl flex items-center justify-center mb-6 shadow-sm border border-gray-100">
-                      <Calendar className="w-10 h-10 text-[#0F6E56]" />
-                    </div>
-                    <h4 className="text-xl font-black text-[#111827] mb-2">Select a Date & Time</h4>
-                    <p className="text-gray-500 font-medium mb-8 max-w-sm">
-                      Our interactive scheduler is loading. You'll be able to pick a time that works best for your team.
-                    </p>
-                    
-                    {/* Simulated Scheduler Interface */}
-                    <div className="w-full max-w-md space-y-3 opacity-40">
-                      {[1, 2, 3].map(i => (
-                        <div key={i} className="h-14 bg-gray-50 rounded-xl border border-gray-100 flex items-center px-6 justify-between">
-                          <div className="w-24 h-4 bg-gray-200 rounded-full" />
-                          <div className="w-16 h-4 bg-gray-100 rounded-full" />
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="mt-12 text-xs font-black text-gray-400 uppercase tracking-[0.2em] flex items-center gap-2">
-                      <ShieldCheck className="w-4 h-4" />
-                      Secure booking powered by Syncify
-                    </div>
-                  </div>
-
-                  {/* NOTE TO DEV: Replace the placeholder div above with your actual Calendly iframe embed */}
-                  {/* 
-                  <iframe 
-                    src="YOUR_CALENDLY_LINK" 
-                    width="100%" 
-                    height="100%" 
-                    frameBorder="0"
-                  ></iframe> 
-                  */}
-                </div>
-              </FadeIn>
-            </div>
-
-          </div>
-        </div>
-      </section>
 
       {/* SECTION 3 - CONTACT FORM */}
       <section className="py-24 bg-gray-50 overflow-hidden relative">
