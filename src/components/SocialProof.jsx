@@ -1,6 +1,26 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { motion, useInView, useMotionValue, useTransform, animate } from 'framer-motion';
 import { Layers } from 'lucide-react';
 import FadeIn from './FadeIn';
+
+const Counter = ({ value, duration = 2 }) => {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest).toLocaleString());
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+
+  useEffect(() => {
+    if (isInView) {
+      const controls = animate(count, value, {
+        duration: duration,
+        ease: "easeOut",
+      });
+      return controls.stop;
+    }
+  }, [isInView, count, value, duration]);
+
+  return <motion.span ref={ref}>{rounded}</motion.span>;
+};
 
 const SocialProof = () => {
   return (
@@ -28,11 +48,15 @@ const SocialProof = () => {
 
           <div className="flex flex-wrap lg:flex-nowrap items-center justify-center lg:justify-end gap-x-12 gap-y-8 w-full">
             <div className="text-center lg:text-left">
-              <div className="text-4xl font-extrabold text-[#111827] tracking-tight">12,000+</div>
+              <div className="text-4xl font-extrabold text-[#111827] tracking-tight">
+                <Counter value={12000} />+
+              </div>
               <div className="text-[13px] font-bold text-[#6B7280] uppercase tracking-wide mt-1">Orders synced daily</div>
             </div>
             <div className="text-center lg:text-left">
-              <div className="text-4xl font-extrabold text-[#111827] tracking-tight">200+</div>
+              <div className="text-4xl font-extrabold text-[#111827] tracking-tight">
+                <Counter value={200} />+
+              </div>
               <div className="text-[13px] font-bold text-[#6B7280] uppercase tracking-wide mt-1">Active storefronts</div>
             </div>
             <div className="text-center lg:text-left">
