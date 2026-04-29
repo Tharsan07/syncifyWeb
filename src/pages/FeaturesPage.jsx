@@ -3,6 +3,20 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Check, X, Zap, RefreshCw, Layers, Globe, Sliders, AlertCircle, ShoppingCart, Users, Package, Activity, Wand2, Download, ShieldCheck, TrendingUp, Cpu, Cloud } from 'lucide-react';
 import FadeIn from '../components/FadeIn';
 
+// Feature Media Imports
+import RealtimeImg from "../assets/features/realTimeSync.jpg";
+import BidirectionalImg from "../assets/features/biDirectionalSync.jpg";
+import MultiStoreImg from "../assets/features/multiStoreSync.jpg";
+import OrderSyncImg from "../assets/features/automatedOrderSync.jpg";
+import CustomerLoggingImg from "../assets/features/cuestomerInfo.jpg";
+import InventoryImg from "../assets/features/inventoryManagement.jpg";
+import MultiCurrencyImg from "../assets/features/multiCurrencySupport.jpg";
+import FieldMappingImg from "../assets/features/fieldMapping.png";
+import ErrorMonitoringImg from "../assets/features/errorMonitoring.jpg";
+import WebhookImg from "../assets/features/webhook.jpg";
+import NoCodeImg from "../assets/features/noCodeSetup.jpg";
+import LegacyImportImg from "../assets/features/dataImport.png";
+
 const featureGroups = [
   {
     category: "Core Sync Features",
@@ -11,17 +25,20 @@ const featureGroups = [
       {
         title: 'Real-Time Sync',
         icon: Zap,
+        image: RealtimeImg,
         desc: 'The moment a customer places an order, updates their details, or a product changes in Shopify, Syncify pushes that data to Salesforce instantly. No waiting for a scheduled sync. No stale records. Your teams always work with the most current information available.',
         value: 'Always work with up-to-date information across every team.'
       },
       {
         title: 'Bi-Directional Sync',
         icon: RefreshCw,
+        image: BidirectionalImg,
         desc: 'Most connectors only push data one way from Shopify to Salesforce. Syncify syncs in both directions. Update a customer record or order note in Salesforce and it reflects back in Shopify automatically. No team\'s work is ever overwritten or lost.'
       },
       {
         title: 'Multi-Store Sync',
         icon: Layers,
+        image: MultiStoreImg,
         desc: 'Running more than one Shopify storefront? Syncify connects all of your stores to a single Salesforce organisation. Manage orders, customers, and products across every storefront from one unified view. No switching accounts, no duplicate setups.'
       }
     ]
@@ -33,21 +50,25 @@ const featureGroups = [
       {
         title: 'Automated Order Sync',
         icon: ShoppingCart,
+        image: OrderSyncImg,
         desc: 'New order in Shopify? It appears in Salesforce automatically. Complete with customer details, line items, shipping information, payment status, and fulfilment data. No manual trigger. No webhook setup required. It simply works from the moment you enable sync.'
       },
       {
         title: 'Customer Info Logging',
         icon: Users,
+        image: CustomerLoggingImg,
         desc: 'Syncify automatically creates or updates account and contact records in Salesforce. Name, email, phone, address, and purchase history, all synced and kept current without any manual data entry.'
       },
       {
         title: 'Inventory Management',
         icon: Package,
+        image: InventoryImg,
         desc: 'Inventory levels are synced in real time between Shopify and Salesforce. Your operations and sales teams always have an accurate view of what\'s in stock.'
       },
       {
         title: 'Multi-Currency Support',
         icon: Globe,
+        image: MultiCurrencyImg,
         desc: 'Sell internationally? Syncify handles multi-currency transactions with accuracy. All order values, refunds, and transaction amounts are synced and reflected in the correct currency in Salesforce. No manual conversions, no formatting errors.'
       }
     ]
@@ -59,16 +80,19 @@ const featureGroups = [
       {
         title: 'Custom Field Mapping',
         icon: Sliders,
+        image: FieldMappingImg,
         desc: 'Every business structures its data differently. Syncify\'s visual field mapping editor lets you define exactly which Shopify fields map to which Salesforce fields.'
       },
       {
         title: 'Error Monitoring & Sync Logs',
         icon: AlertCircle,
+        image: ErrorMonitoringImg,
         desc: 'Every sync event is logged with a timestamp, the record affected, and the outcome. If something fails, you\'ll know exactly what happened, when it happened, and what needs attention. Resolve issues quickly without raising a support ticket.'
       },
       {
         title: 'Webhook-Based Data Flow',
         icon: Activity,
+        image: WebhookImg,
         desc: 'Syncify uses Shopify\'s native webhook infrastructure to detect and act on events the moment they happen and not on a polling schedule. This means faster data delivery, lower latency, and a more reliable sync experience regardless of your store\'s order volume.'
       }
     ]
@@ -80,11 +104,13 @@ const featureGroups = [
       {
         title: 'No-Code Setup',
         icon: Wand2,
+        image: NoCodeImg,
         desc: 'Syncify is designed to be configured by business users and not developers. The guided onboarding wizard, visual field mapper, and plain-language settings mean your team can have a full sync running in under 10 minutes, without writing a single line of code.'
       },
       {
         title: 'Legacy Data Import',
         icon: Download,
+        image: LegacyImportImg,
         desc: 'Starting with an existing Shopify store? Syncify\'s one-click historical import brings all your past orders, customers, and products into Salesforce in one go, whether you have 1,000 or 1,000,000 records, the import handles it without performance issues.'
       }
     ]
@@ -214,13 +240,23 @@ const FeaturesPage = () => {
 
                         {/* VISUAL SIDE */}
                         <div className="flex-1 w-full flex justify-center">
-                          <FadeIn delay={0.2} className="w-full max-w-md">
-                            <div className="w-full aspect-square bg-[#F9FAFB] rounded-xl shadow-md border border-[#F9FAFB] flex flex-col items-center justify-center p-8 group relative overflow-hidden">
-                              <div className="absolute inset-0 bg-gradient-to-tr from-white to-[#E1F5EE]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                              <feature.icon className="w-24 h-24 text-[#0F6E56] opacity-90 transform group-hover:scale-105 transition-transform duration-500 relative z-10" strokeWidth={1} />
-                              <div className="mt-8 text-sm font-semibold text-[#6B7280] uppercase tracking-widest relative z-10">
-                                {feature.title}
-                              </div>
+                          <FadeIn delay={0.2} className="w-full">
+                            <div className="w-full h-full min-h-[320px] bg-white rounded-3xl shadow-sm border border-green-100 overflow-hidden group relative p-0">
+                              {feature.image ? (
+                                <img
+                                  src={feature.image}
+                                  alt={feature.title}
+                                  className="w-full h-full object-cover rounded-3xl transition duration-500 group-hover:scale-105"
+                                />
+                              ) : (
+                                <div className="w-full h-full flex flex-col items-center justify-center p-8 bg-[#F9FAFB]">
+                                  <div className="absolute inset-0 bg-gradient-to-tr from-white to-[#E1F5EE]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                  <feature.icon className="w-24 h-24 text-[#0F6E56] opacity-90 transform group-hover:scale-105 transition-transform duration-500 relative z-10" strokeWidth={1} />
+                                  <div className="mt-8 text-sm font-semibold text-[#6B7280] uppercase tracking-widest relative z-10">
+                                    {feature.title}
+                                  </div>
+                                </div>
+                              )}
                             </div>
                           </FadeIn>
                         </div>

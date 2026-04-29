@@ -55,7 +55,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
             <FadeIn>
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#0F6E56]/10 border border-[#1D9E75]/20 text-[#0F6E56] text-[11px] font-black uppercase tracking-[0.2em] mb-6">
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-darkGreen/10 border border-primary/20 text-darkGreen text-[11px] font-black uppercase tracking-[0.2em] mb-6">
                 Connect With Us
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#111827] tracking-tight leading-tight mb-6">
@@ -106,7 +106,7 @@ const Contact = () => {
                       name="firstName"
                       required
                       placeholder="Jane"
-                      className="w-full px-6 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#0F6E56]/20 focus:border-[#0F6E56] transition-all font-medium text-[#111827]"
+                      className="w-full px-6 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-darkGreen/20 focus:border-darkGreen transition-all font-medium text-[#111827]"
                       onChange={handleChange}
                     />
                   </div>
@@ -186,7 +186,7 @@ const Contact = () => {
                 <div className="flex flex-col items-center gap-6 pt-6">
                   <button
                     type="submit"
-                    className="w-full md:w-auto bg-[#0F6E56] hover:bg-[#085041] text-white px-12 py-5 rounded-full text-lg font-black transition-all shadow-xl hover:-translate-y-1 flex items-center justify-center gap-3 group"
+                    className="w-full md:w-auto bg-darkGreen hover:bg-primary text-white px-12 py-5 rounded-full text-lg font-black transition-all shadow-xl hover:-translate-y-1 flex items-center justify-center gap-3 group"
                   >
                     {isSubmitted ? 'Message Sent!' : 'Send Message'}
                     <ChevronRight className={`w-5 h-5 group-hover:translate-x-1 transition-transform ${isSubmitted ? 'hidden' : ''}`} />
@@ -204,12 +204,12 @@ const Contact = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FadeIn delay={0.1}>
               <div className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500 h-full group text-center md:text-left">
-                <div className="w-16 h-16 bg-[#E1F5EE] rounded-3xl flex items-center justify-center mb-8 mx-auto md:mx-0 group-hover:scale-110 transition-transform">
-                  <Mail className="w-8 h-8 text-[#0F6E56]" />
+                <div className="w-16 h-16 bg-lightGreen rounded-3xl flex items-center justify-center mb-8 mx-auto md:mx-0 group-hover:scale-110 transition-transform">
+                  <Mail className="w-8 h-8 text-darkGreen" />
                 </div>
                 <h4 className="text-xl font-black text-[#111827] mb-4">Sales & Enquiries</h4>
                 <p className="text-gray-600 font-medium mb-6 leading-relaxed">Questions about pricing, bulk discounts, or enterprise features?</p>
-                <a href="mailto:sales@laconfianzatech.com" className="inline-flex items-center gap-2 text-[#0F6E56] font-black text-sm uppercase tracking-widest hover:underline">
+                <a href="mailto:sales@laconfianzatech.com" className="inline-flex items-center gap-2 text-darkGreen font-black text-sm uppercase tracking-widest hover:underline">
                   Email Sales
                   <ArrowRight className="w-4 h-4" />
                 </a>

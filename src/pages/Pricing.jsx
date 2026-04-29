@@ -135,14 +135,14 @@ const Pricing = () => {
                 { icon: CreditCard, label: "No Credit Card Required" },
                 { icon: Calendar, label: "Cancel Anytime" }
               ].map((badge, idx) => (
-                <div key={idx} className="flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-[#0F6E56]/10 shadow-sm">
-                  <badge.icon className="w-4 h-4 text-[#0F6E56]" />
+                <div key={idx} className="flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-darkGreen/10 shadow-sm">
+                  <badge.icon className="w-4 h-4 text-darkGreen" />
                   <span className="text-sm font-bold text-[#111827]">{badge.label}</span>
                 </div>
               ))}
             </div>
 
-            <Link to="/contact" className="inline-flex items-center justify-center gap-2 bg-[#0F6E56] hover:bg-[#085041] text-white px-10 py-4 rounded-full text-lg font-bold transition-all shadow-xl hover:-translate-y-1 group">
+            <Link to="/contact" className="inline-flex items-center justify-center gap-2 bg-darkGreen hover:bg-primary text-white px-10 py-4 rounded-full text-lg font-bold transition-all shadow-xl hover:-translate-y-1 group">
               Book a Demo
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -170,17 +170,17 @@ const Pricing = () => {
                     Includes a 7-day free trial with no credit card required.
                   </p>
 
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#E1F5EE] rounded-xl border border-[#0F6E56]/10 mb-8">
-                    <ArrowRight className="w-4 h-4 text-[#0F6E56]" />
-                    <span className="text-xs font-black text-[#0F6E56] uppercase tracking-wider">Shopify to Salesforce (one-way)</span>
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-lightGreen rounded-xl border border-darkGreen/10 mb-8">
+                    <ArrowRight className="w-4 h-4 text-darkGreen" />
+                    <span className="text-xs font-black text-darkGreen uppercase tracking-wider">Shopify to Salesforce (one-way)</span>
                   </div>
                 </div>
 
                 <div className="space-y-4 mb-10 flex-grow">
                   {standardFeatures.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-[#E1F5EE] flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-3 h-3 text-[#0F6E56]" strokeWidth={4} />
+                      <div className="w-5 h-5 rounded-full bg-lightGreen flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-3 h-3 text-darkGreen" strokeWidth={4} />
                       </div>
                       <span className="text-gray-600 text-sm font-medium leading-relaxed">{feature}</span>
                     </div>
@@ -188,10 +188,10 @@ const Pricing = () => {
                 </div>
 
                 <div className="pt-8 border-t border-gray-50 mt-auto flex flex-col gap-3">
-                  <Link to="/contact" className="w-full inline-flex items-center justify-center gap-2 bg-[#0F6E56] hover:bg-[#085041] text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-md">
+                  <Link to="/contact" className="w-full inline-flex items-center justify-center gap-2 bg-darkGreen hover:bg-primary text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-md">
                     Start Free Trial
                   </Link>
-                  <Link to="/contact" className="w-full inline-flex items-center justify-center gap-2 bg-transparent hover:bg-green-50 text-[#0F6E56] px-8 py-4 rounded-xl text-lg font-bold transition-all border border-[#0F6E56] mb-2">
+                  <Link to="/contact" className="w-full inline-flex items-center justify-center gap-2 bg-transparent hover:bg-lightGreen text-darkGreen px-8 py-4 rounded-xl text-lg font-bold transition-all border border-darkGreen mb-2">
                     Book a Demo
                   </Link>
                   <p className="text-center text-xs text-gray-400 font-bold uppercase tracking-widest">
@@ -203,7 +203,7 @@ const Pricing = () => {
 
             {/* Pro Card */}
             <FadeIn direction="up" delay={0.2}>
-              <div className="h-full bg-white rounded-3xl border-2 border-[#0F6E56] shadow-2xl p-8 md:p-10 flex flex-col relative overflow-hidden group">
+              <div className="h-full bg-white rounded-3xl border-2 border-darkGreen shadow-2xl p-8 md:p-10 flex flex-col relative overflow-hidden group">
                 {/* Popular Badge Decoration */}
                 <div className="absolute top-0 right-0">
                   <div className="bg-[#0F6E56] text-white text-[10px] font-black uppercase tracking-[0.2em] px-8 py-2 rotate-45 translate-x-8 translate-y-4 shadow-lg">
@@ -212,7 +212,7 @@ const Pricing = () => {
                 </div>
 
                 <div className="mb-8">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#0F6E56] text-white text-xs font-black tracking-widest uppercase mb-4 shadow-md shadow-[#0F6E56]/20">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-darkGreen text-white text-xs font-black tracking-widest uppercase mb-4 shadow-md shadow-darkGreen/20">
                     Most Powerful
                   </span>
                   <h3 className="text-2xl font-black text-[#111827] mb-2">Syncify Pro</h3>
@@ -224,7 +224,7 @@ const Pricing = () => {
                     Includes a 7-day free trial with no credit card required.
                   </p>
 
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#0F6E56] to-[#1D9E75] rounded-xl shadow-lg mb-4">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-darkGreen to-primary rounded-xl shadow-lg mb-4">
                     <ArrowRightLeft className="w-4 h-4 text-white" />
                     <span className="text-xs font-black text-white uppercase tracking-wider">Shopify and Salesforce fully bi-directional</span>
                   </div>
@@ -239,7 +239,7 @@ const Pricing = () => {
                     <div className="space-y-4">
                       {proFeatures.map((feature, idx) => (
                         <div key={idx} className="flex items-start gap-3">
-                          <div className="w-5 h-5 rounded-full bg-[#0F6E56] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md shadow-[#0F6E56]/20">
+                          <div className="w-5 h-5 rounded-full bg-darkGreen flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md shadow-darkGreen/20">
                             <Check className="w-3 h-3 text-white" strokeWidth={4} />
                           </div>
                           <span className="text-gray-900 text-sm font-bold leading-relaxed">{feature}</span>
@@ -316,12 +316,12 @@ const Pricing = () => {
                           <div className="md:hidden text-[10px] font-black text-[#0F6E56] uppercase tracking-widest mr-4">Pro:</div>
                           {typeof row.pro === "boolean" ? (
                             row.pro ? (
-                              <Check className="w-4 h-4 text-[#0F6E56]" strokeWidth={3} />
+                              <Check className="w-4 h-4 text-darkGreen" strokeWidth={3} />
                             ) : (
                               <X className="w-4 h-4 text-gray-200" strokeWidth={3} />
                             )
                           ) : (
-                            <span className="text-xs font-black text-[#0F6E56]">{row.pro}</span>
+                            <span className="text-xs font-black text-darkGreen">{row.pro}</span>
                           )}
                         </div>
                       </div>

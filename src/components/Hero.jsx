@@ -7,8 +7,8 @@ import ProductUI from './ProductUI';
 const Hero = () => {
   return (
     <section className="relative pb-20 lg:pt-10 lg:pb-28 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#0F6E56]/10 via-[#F9FAFB] to-[#F9FAFB] -z-10"></div>
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[50rem] h-[50rem] bg-[#0F6E56]/5 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-darkGreen/10 via-[#F9FAFB] to-[#F9FAFB] -z-10"></div>
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[50rem] h-[50rem] bg-darkGreen/5 blur-[120px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">
@@ -16,7 +16,7 @@ const Hero = () => {
           <div className="max-w-2xl">
             <FadeIn delay={0.1}>
               <h1 className="text-5xl sm:text-6xl lg:text-[4rem] font-extrabold text-[#111827] tracking-tight leading-[1.1] mb-6">
-                Sync Shopify with Salesforce <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0F6E56] to-[#1D9E75]">In Real Time</span>
+                Sync Shopify with Salesforce <span className="text-transparent bg-clip-text bg-gradient-to-r from-darkGreen to-primary">In Real Time</span>
               </h1>
             </FadeIn>
 
@@ -29,7 +29,7 @@ const Hero = () => {
 
             <FadeIn delay={0.3}>
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5">
-                <Link to="/contact" className="bg-[#0F6E56] hover:bg-[#1D9E75] text-white px-8 py-4 rounded-full text-base font-bold transition-all shadow-[0_8px_30px_rgba(15,110,86,0.3)] hover:shadow-[0_8px_30px_rgba(15,110,86,0.4)] hover:-translate-y-0.5 flex items-center gap-2 group">
+                <Link to="/contact" className="bg-darkGreen hover:bg-primary text-white px-8 py-4 rounded-full text-base font-bold transition-all shadow-[0_8px_30px_rgba(22,101,52,0.3)] hover:shadow-[0_8px_30px_rgba(34,197,94,0.4)] hover:-translate-y-0.5 flex items-center gap-2 group">
                   Book a Demo
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -60,7 +60,7 @@ const Hero = () => {
               <FadeIn delay={0.7}>
                 <div className="flex flex-col items-center gap-2 group cursor-default">
                   <div className="bg-white p-4 sm:p-5 rounded-xl shadow-md border border-[#F9FAFB] hover:scale-105 transition-transform duration-300">
-                    <RefreshCw className="w-6 h-6 sm:w-8 sm:h-8 text-[#0F6E56]" />
+                    <RefreshCw className="w-6 h-6 sm:w-8 sm:h-8 text-darkGreen" />
                   </div>
                   <span className="text-xs font-semibold text-[#6B7280] tracking-wide">Syncify</span>
                 </div>

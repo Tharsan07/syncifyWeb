@@ -7,9 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#4FA64F",
-        darkGreen: "#2F7A3E",
-        lightGreen: "#E8F5E9",
+        primary: {
+          DEFAULT: "#17d05bff",
+          hover: "#12a346",
+          light: "#ecfdf5",
+          dark: "#064e3b",
+        },
+        darkGreen: "#064e3b",
+        lightGreen: "#ecfdf5",
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
