@@ -202,12 +202,24 @@ const FeaturesPage = () => {
               </FadeIn>
             </div>
 
-            <div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
               {group.features.map((feature, fIdx) => {
+                const globalIdx = featureGroups.slice(0, gIdx).reduce((acc, curr) => acc + curr.features.length, 0) + fIdx;
+                const isGreen = globalIdx % 2 !== 0;
                 const isEven = fIdx % 2 === 0;
+                
                 return (
-                  <section key={fIdx} className="py-16 border-b border-[#F9FAFB] last:border-0">
-                    <div className="max-w-6xl mx-auto px-6">
+                  <section 
+                    key={fIdx} 
+                    className={`relative overflow-hidden py-20 px-6 lg:px-10 rounded-3xl mb-10 ${isGreen ? 'bg-gradient-to-br from-[#eefaf3] via-white to-[#e3f7ec] border border-green-100/50 shadow-sm' : 'bg-white border border-gray-100 shadow-sm'}`}
+                  >
+                    {isGreen && (
+                      <>
+                        <div className="absolute top-10 left-10 w-48 h-48 lg:w-72 lg:h-72 bg-green-300/20 blur-3xl rounded-full"></div>
+                        <div className="absolute bottom-10 right-10 w-56 h-56 lg:w-80 lg:h-80 bg-emerald-300/20 blur-3xl rounded-full"></div>
+                      </>
+                    )}
+                    <div className="max-w-6xl mx-auto relative z-10">
                       <div className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 ${isEven ? '' : 'lg:flex-row-reverse'}`}>
 
                         {/* TEXT SIDE */}
